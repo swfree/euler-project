@@ -1,76 +1,56 @@
-$(document).ready(function(){
-	$("button").click(function(){
-		var parent = $(this).parent();
-		var n = parent.find(".num").text();
-		var result = parent.find(".result");
-		/*switch (parent.attr("id")){
-			case "problem1":*/
-		if (parent.attr("id")==="problem1") {
-				var sum = 0;
-				for (var i = 0; i < n; i++) {
-					if ((i % 3 == 0) || (i % 5 == 0)) {
-						sum += i;
-					};
+$(document).ready(function() {
+      $('#hit').click(function(event) {
+          var max = +$('#p1_max').val();
+          var total = 0;
+          for(var i=1;i<max;i++){
+          	if(i%3===0 || i%5===0){
+          		total+=i;
+          	};
+          };
+          $('#result').text(total);
+      });
+      $('#hit2').click(function(event) {
+			var evenTotal = 0;
+			var maxFibonacci = +$('#p2_max').val();
+			var current = 1;
+			var previous = 1;
+			var next = 1;
+			while (current < maxFibonacci) {
+				if(current%2===0){
+					evenTotal+=current;
+					next = current+previous;
+					previous=current;
+					current=next;
+				} else {
+					next = current+previous;
+					previous=current;
+					current=next;
 				};
-				result.html("The result is: " + sum);
-				return;
-		};
-	});
-	$("input").blur(function() {
-		$(this.parent().find(".num").text($(this).val()))
-	});
-});
-
-
-
-
-
-/*
-
-$(document).ready(function(){
-	$("#answer1").click(function(){
-		$("#max1").val(function(i,final_answer){
-			return final_answer + "Hello";
-		});
-	});
-});
-
-
-
-
-
-
-$(document).ready(function(){
-	$("#dosomething").click(function(){
-		$("#deftext").val("Cindy");
-	});
-});
-
-
-
-
-var problem1 = function(max){
-    var total = 0;
-for(var i=1;i<max;i++){
-    if(i%3===0){
-        total+=i;
-    } else if(i%5===0){
-        total+=i;
-    }
-}
-    return total;
-};
-
-var max = 1000;
-var answer1 = problem1(max);
-console.log('Answer 1' + answer1);
-
-
-
-
-
-
-
-
-
-233168*/
+			};
+			$('#result2').text(evenTotal);
+          });
+	    $('#hit3').click(function(event) {
+			var input = +$('#p3_max').val();
+			var output = "";
+			function isPrime(value){
+				for (var i = 2; i < value; i++){
+					if (value % i === 0){
+						output = "notPrime";
+                        i = value;
+					} else{
+                        output = "Prime";
+                    };
+				};
+			};
+            for(i=1; i<input;i++){
+                if(input % (input-i) === 0){
+                    isPrime((input-i));
+                    if(output==="Prime"){
+                        prime_multiplier=(input-i);
+                        i=input;
+                    };
+                };
+            };            
+			$('#result3').text(prime_multiplier);
+      	});
+  });

@@ -1,17 +1,22 @@
-body {
-	background-color:#FAFFF0;
+h1 {
+	text-align:center;
+}
+
+p {
+	font-size:.8em;
+}
+.container {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.wrapper {
+	float:left;
+	width:33%;
 }
 
 .problem {
-	background-color:#7A993D;
-	height:150px;
-	width:600px;
-	margin:10px auto 10px auto;
-	padding: .05% 1% .05% 1%;
-	font-family:Arial,sans-serif;
-}
-
-h1 {
-	font-family:Arial,sans-serif;
-	text-align:center;
+	background-color:#EBF5FF;
+	margin:10px;
+	padding:10px 20px 20px 20px;
+	height:200px;
 }

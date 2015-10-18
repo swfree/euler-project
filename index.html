@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<link href="style.css" rel="stylesheet" type="text/css">	
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="../../jquery-2.1.4.min.js"></script>
+	<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 	<script src="script.js"></script>
-
 </head>
-
 <body>
+<div class="container">
 	<h1>Project Euler</h1>
-	<div class="problem" id="problem1"
-
-
-
-	<!-- <div class = "boxes" id="problem1">
-		<h3>Problem 1</h3>
-		<p>Find the sum of all multiples of 3 or 5 below <em><span class="num">1000</span></em>.</p>
-		Enter your name: 
-		<input type="text" id="max1" value="1000">
-		<button id="answer1">Answer</button>
-		<div class="result"></div>
-	</div>-->
-	<div class = "problem">
-		<h3>Problem 2</h3>
+	<div class="wrapper">
+		<div class="problem" id="problem1">
+			<h3>Problem 1: Multiples of 3 & 5</h3>
+			<p>Sum of multiples of 3 and 5 up to maximum input value:</p>
+			<input id="p1_max" type="text" value="1000" />
+			<button id="hit" type="button" name="">Answer</button>
+			<p>The answer to problem 1 is: <span id="result"></span></p>
+		</div>
 	</div>
-	<div class = "problem">
-		<h3>Problem 3</h3>
+	<div class="wrapper">
+		<div class="problem" id="problem2">
+			<h3>Problem 2: Fibonacci Numbers</h3>
+			<p>Sum of even Fibonacci numbers up to:</p>
+			<input id="p2_max" type="text" value="4000000" />
+			<button id="hit2" type="button" name="">Answer</button>
+			<p>The answer to problem 2 is: <span id="result2"></span></p>
+		</div>
 	</div>
-
+	<div class="wrapper">
+		<div class="problem" id="problem3">
+			<h3>Problem 3: Largest Prime Factors</h3>
+			<p>The largest prime factors of number:</p>
+			<input id="p3_max" type="text" value="1000" />
+			<button id="hit3" type="button" name="">Answer</button>
+			<p>The answer to problem 3 is: <span id="result3"></span></p>
+		</div>
+	</div>
+</div>
 </body>
-
 </html>
